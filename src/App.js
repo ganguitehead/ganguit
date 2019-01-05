@@ -3,6 +3,12 @@ import './App.css';
 import Textbox from './Textbox';
 import Entities from './Entities';
 import {Jumbotron, Container, Row, Col, FormGroup} from 'reactstrap';
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faTrash,faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTrash)
+library.add(faPlusCircle)
 
 class App extends Component {
     render() {
@@ -14,12 +20,12 @@ class App extends Component {
                         <hr className="my-2"/>
 
                         <Row>
-                            <FormGroup>
-                                <Col>
-                                    <Entities/>
-                                </Col>
-                            </FormGroup>
+                            <Col>
+                                <Entities/>
+                            </Col>
                         </Row>
+
+                        <br/>
 
                         <Row>
                             <Col>

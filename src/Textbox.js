@@ -26,8 +26,8 @@ class Textbox extends Component {
         return (
             <div>
                 <FormGroup>
-                    <Label for="exampleText">Copy your text below:</Label>
-                    <Input type="textarea" name="textbox" id="textbox" className="textbox"/>
+                    <Label for="textbox">Copy your text below:</Label>
+                    <Input type="textarea" name="textbox" id="textbox" className="textbox" onSelect={this.handleSelect}/>
                 </FormGroup>
             </div>
         );

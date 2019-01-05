@@ -7,9 +7,11 @@ import {
     Col,
     FormGroup,
     Input,
-    Row
+    Row,
+    Container
 } from 'reactstrap';
 import EntityList from './EntityList';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 class Entities extends Component {
     constructor(props) {
@@ -45,9 +47,10 @@ class Entities extends Component {
         return (
             <div>
                 <Button color="primary" onClick={this.toggle} style={{marginBottom: '1rem'}}>
-                    Add Entities
+                    New Entities
                 </Button>
                 <Collapse isOpen={this.state.collapse}>
+
                     <Row>
                         <Col sm="12">
                             <Card>
@@ -57,6 +60,9 @@ class Entities extends Component {
 
                                         <Col sm="6" xs="6">
                                             <FormGroup>
+                                                <h5>
+                                                    <FontAwesomeIcon icon="plus-circle"/> Entity Type
+                                                </h5>
                                                 <Input type="text" name="newEntityName" id="newEntityName"
                                                        placeholder="Entity Name" onKeyPress={this.addNewEntity}/>
                                             </FormGroup>

@@ -32,5 +32,10 @@
 }
 
 .textbox {
-    height: 20vw;
+    height: 15vw;
+}
+
+.icon:hover {
+    color: blue;
+    cursor: pointer;
 }
